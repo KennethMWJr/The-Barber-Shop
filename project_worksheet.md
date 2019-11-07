@@ -64,8 +64,6 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 Define the the components and the architectural design of your app.
 
-#### [SAMPLE FROM A MAP BASED PROJECT](https://res.cloudinary.com/dvjtpejbw/image/upload/v1540221204/20181022_111216.jpg)
-
 See "Components" page: 
 
 https://www.figma.com/file/BQLbVHUzP7E7Whu0gC0SMd/Wireframing-Copy?node-id=89402%3A248
@@ -90,7 +88,7 @@ See components page
 | Header | This will render the header include the nav | 
 | Nav | Will provide links to pages |
 | Main | Will render info for each page |
-| Client Form | Will render a form |
+| Client Form | Will render a form for users to create clients |
 | Barber Login | Will render a login form |
 | # of Clients | Will provide number of clients for each barber |
 | List of Clients | Will render list of clients for each barber |
@@ -104,16 +102,16 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: |
 | Adding Form | H | 3hrs|  |
+| Review | H | 5 hrs | |
+| Creating Frontend logic | H | 5 hrs |
 | Working with API | H | 3hrs| |
 | Scaffolding | H | 6 hrs | |
 | Frontend CRUD | H | 4 hrs |
-| Backend CRUD | H | 5 hrs | |
+| Backend CRUD | H | 10 hrs | |
 | Styling | H | 10 hrs | |
-| AWS | H | 3 hrs | | 
-| Deployment | H | 3 hrs | |
+| Deployment | H | 6 hrs | |
 | troubleshooting | H | 5 hrs | | 
-| PMVP | L | 10 hrs | |
-| Total | H | 48hrs| | 
+| Total | H | 50hrs| | 
 
 ## Helper Functions
 Helper functions should be generic enough that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
