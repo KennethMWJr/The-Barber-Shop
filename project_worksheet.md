@@ -8,8 +8,8 @@ You are **responsible** for attending squad standup at the begining and end of t
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Day 1| Project Description | Incomplete
-|Day 2| Wireframes / Priority Matrix / Functional Components | Incomplete
+|Day 1| Project Description | complete
+|Day 2| Wireframes / Priority Matrix / Functional Components | complete
 |Day 3| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |Day 4| Pseudocode / actual code | Incomplete
 |Day 5| Initial Clickable Model  | Incomplete
@@ -46,7 +46,6 @@ https://www.figma.com/file/BQLbVHUzP7E7Whu0gC0SMd/Wireframing-Copy?node-id=89402
 
 The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
 
-#### SAMPLE.....
 #### MVP 
 
 - Create api. 
@@ -88,7 +87,7 @@ Based on the initial logic defined in the previous sections try and breakdown th
 
 See components page
 
-#### SAMPLE.....
+
 | Component | Description | 
 | --- | :---: |  
 | Header | This will render the header include the nav | 
@@ -104,7 +103,7 @@ See components page
 
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe.
 
-#### SAMPLE.....
+
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: |
 | Adding Form | H | 3hrs|  |
@@ -117,7 +116,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Deployment | H | 3 hrs | |
 | troubleshooting | H | 5 hrs | | 
 | PMVP | L | 10 hrs | |
-| Total | H | 6hrs| 5hrs | 
+| Total | H | 48hrs| | 
 
 ## Helper Functions
 Helper functions should be generic enough that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
