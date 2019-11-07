@@ -48,18 +48,15 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 #### MVP 
 
-- Create api. 
-- Build Backend & Frontend. 
-- Render data on page in a list.
-- Create a login and password form for barbers.
-- Create a form for clients.
-- Apply CRUD to frontend and backend.
-- Style mobile-first design 
+- Create backend models for barbers and clients 
+- A user of the site can add a client to a barber's queue
+- Client info in a queue can be updated and deleted
+- App is responsive with a mobile-first design 
 
 
 #### PostMVP 
 
-- Add a feature that allows clients to get updates by email or text message
+- Barber's can log in with User Auth to see their queue
 
 
 
