@@ -1,0 +1,26 @@
+I, [2019-11-08T21:29:33.258083 #20356]  INFO -- : [de160ebe-000e-471d-9418-0b357c28db3f] Started GET "/" for 127.0.0.1 at 2019-11-08 21:29:33 -0500
+F, [2019-11-08T21:29:33.258888 #20356] FATAL -- : [de160ebe-000e-471d-9418-0b357c28db3f]   
+[de160ebe-000e-471d-9418-0b357c28db3f] ActionController::RoutingError (No route matches [GET] "/"):
+[de160ebe-000e-471d-9418-0b357c28db3f]   
+[de160ebe-000e-471d-9418-0b357c28db3f] actionpack (6.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+[de160ebe-000e-471d-9418-0b357c28db3f] actionpack (6.0.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+[de160ebe-000e-471d-9418-0b357c28db3f] railties (6.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+[de160ebe-000e-471d-9418-0b357c28db3f] railties (6.0.1) lib/rails/rack/logger.rb:26:in `block in call'
+[de160ebe-000e-471d-9418-0b357c28db3f] activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+[de160ebe-000e-471d-9418-0b357c28db3f] activesupport (6.0.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+[de160ebe-000e-471d-9418-0b357c28db3f] activesupport (6.0.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+[de160ebe-000e-471d-9418-0b357c28db3f] railties (6.0.1) lib/rails/rack/logger.rb:26:in `call'
+[de160ebe-000e-471d-9418-0b357c28db3f] actionpack (6.0.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+[de160ebe-000e-471d-9418-0b357c28db3f] actionpack (6.0.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+[de160ebe-000e-471d-9418-0b357c28db3f] rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+[de160ebe-000e-471d-9418-0b357c28db3f] rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+[de160ebe-000e-471d-9418-0b357c28db3f] activesupport (6.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+[de160ebe-000e-471d-9418-0b357c28db3f] actionpack (6.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+[de160ebe-000e-471d-9418-0b357c28db3f] rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+[de160ebe-000e-471d-9418-0b357c28db3f] actionpack (6.0.1) lib/action_dispatch/middleware/host_authorization.rb:77:in `call'
+[de160ebe-000e-471d-9418-0b357c28db3f] railties (6.0.1) lib/rails/engine.rb:526:in `call'
+[de160ebe-000e-471d-9418-0b357c28db3f] puma (4.3.0) lib/puma/configuration.rb:228:in `call'
+[de160ebe-000e-471d-9418-0b357c28db3f] puma (4.3.0) lib/puma/server.rb:667:in `handle_request'
+[de160ebe-000e-471d-9418-0b357c28db3f] puma (4.3.0) lib/puma/server.rb:470:in `process_client'
+[de160ebe-000e-471d-9418-0b357c28db3f] puma (4.3.0) lib/puma/server.rb:328:in `block in run'
+[de160ebe-000e-471d-9418-0b357c28db3f] puma (4.3.0) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
