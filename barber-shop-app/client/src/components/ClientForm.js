@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-// import axios from 'axios'
+import axios from 'axios'
 
 class ClientForm extends Component {
     constructor(props) {
@@ -23,7 +23,7 @@ class ClientForm extends Component {
     }
 
     async onSubmit (){
-        // let response = await axios.post(`/users/${this.props.user.id}`, this.state)
+        let response = await axios.post(`/users/${this.props.user.id}`, this.state)
     }
 
     render() {
@@ -37,6 +37,11 @@ class ClientForm extends Component {
                     <br/>
                 <label htmlFor = "email">Email:</label>
                 <input type = "text" name = "email" value = {this.state.email} />
+                    <br/>
+                {/* <label htmlFor = "barber">Barber:</label>
+                <select name= "type">
+                    </select>  */}
+
                 <input type = "submit" onClick = {this.onSubmit} />
             </form>
         )

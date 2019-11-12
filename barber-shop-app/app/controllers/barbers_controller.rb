@@ -1,6 +1,6 @@
 class BarbersController < ApplicationController
-    before_action :set_barber, only: [:show, :update]
-    
+    # skip_before_action :verify_authenticity_token
+    # before_action :set_barber, only: [:index, :show, :create, :update, :delete]
     
     def index
         barber = Barber.all
@@ -44,7 +44,7 @@ class BarbersController < ApplicationController
 
     def update
         @barber = Barber.find(params[:id])
-        barber.update(barber_params)
+        @barber.update(barber_params)
         render json: { barber: barber }
     end
 
@@ -57,6 +57,7 @@ class BarbersController < ApplicationController
 
 
     def set_barber
+        
         barber = Barber.find(params[:id])
     end
 

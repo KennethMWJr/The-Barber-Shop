@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-    skip_before_action :verify_authenticity_token
-    before_action :set_user, only: [:show, :update]
+    # skip_before_action :verify_authenticity_token
+    # before_action :set_user, only: [:show, :update]
     
     
     def index
@@ -29,10 +29,6 @@ class UsersController < ApplicationController
         end
     end
 
-    def new
-        @user = User.new
-    end
-
     def create
         @user = User.new(user_params)
         if @user.save
@@ -42,7 +38,7 @@ class UsersController < ApplicationController
             }
         else
             render json: { 
-                message: user.errors 
+                message: @user.errors 
                 }, status: 500
         end
     end
@@ -64,7 +60,7 @@ class UsersController < ApplicationController
     end
 
     def user_params
-        params.permit(:client, :phone, :email)
+        params.permit(:client, :phone, :email, :barber)
     end
 
 end
