@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
-import axios from 'axios'
+import axios from 'axios';
+import UserList from './UserList';
+import ClientList from './ClientList'
 
 class ShowBarbers extends Component {
     constructor () {
         super()
         this.state = {
-          barber: [] 
+          barbers: [] 
         }
     }
 
@@ -14,7 +16,7 @@ class ShowBarbers extends Component {
         console.log(response.data)
         let barbers = response.data.barber;
         this.setState({
-            barber: barbers
+            barbers: barbers
 
         })
     }
@@ -22,11 +24,13 @@ class ShowBarbers extends Component {
     render() {
         return (
         <div>
-             {this.state.barber.map( barber => { 
-                  return ( <div>
+             {this.state.barbers.map( (barber, i) => { 
+                  return ( <div key={i}>
                   <p>{barber.name}</p>
                   <img src={barber.photo} alt="barber" />
                   <p></p>
+                  <UserList barberId = {barber.id} />
+                  <ClientList barberId = {barber.id} />
                   </div> )
              })} 
 

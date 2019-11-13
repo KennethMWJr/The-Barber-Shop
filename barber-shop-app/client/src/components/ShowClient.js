@@ -1,15 +1,17 @@
 import React from "react"
-// import axios from "axios"
+import axios from "axios"
 
 function ShowClient(props) {
     async function handleDelete() {
-        // let deleted = axios.delete(`/users/${props.user.id}`)
+    let deleted = await axios.delete(`/users/${props.user.id}`)
+    window.location.reload()
+    // refresh page on delete
         console.log(deleted)
     }
 
     return(
         <div>
-            <p>{props.user.name}</p>
+            <p>{props.user.client}</p>
             <p>{props.user.phone}</p>
             <p>{props.user.email}</p>
             <button onClick = {props.onClickEdit}>Edit</button>
@@ -18,4 +20,4 @@ function ShowClient(props) {
     )
 }
 
-export default ShowUser;
+export default ShowClient;

@@ -4,10 +4,10 @@ class UsersController < ApplicationController
     
     
     def index
-        user = User.all
+        @users = User.all
         render json: { 
             message: "ok", 
-            user: user.all 
+            user: @users
         }
     end
 
@@ -16,7 +16,7 @@ class UsersController < ApplicationController
             @user = User.find(params[:id])
             render json: { 
                 message: "ok", 
-                barber: @user 
+                user: @user 
             }
         rescue ActiveRecord::RecordNotFound
             render json: { 
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
         if @user.save
             render json: { 
                 message: "ok", 
-                barber: barber
+                user: @user
             }
         else
             render json: { 
@@ -45,12 +45,12 @@ class UsersController < ApplicationController
 
     def update
         @user = User.find(params[:id])
-        user.update(user_params)
-        render json: { user: user }
+        @user.update(user_params)
+        render json: { user: @user }
     end
 
     def destroy
-        user = User.destroy(params[:id])
+        @user = User.destroy(params[:id])
         render json: { status: 204 }
     end
 
@@ -60,7 +60,7 @@ class UsersController < ApplicationController
     end
 
     def user_params
-        params.permit(:client, :phone, :email, :barber)
+        params.permit(:client, :phone, :email, :barber_id)
     end
 
 end

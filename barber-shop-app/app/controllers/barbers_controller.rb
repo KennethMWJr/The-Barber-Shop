@@ -3,10 +3,10 @@ class BarbersController < ApplicationController
     # before_action :set_barber, only: [:index, :show, :create, :update, :delete]
     
     def index
-        barber = Barber.all
+        @barbers = Barber.all
         render json: { 
             message: "ok", 
-            barber: Barber.all 
+            barber: @barbers 
         }
     end
 
@@ -33,11 +33,11 @@ class BarbersController < ApplicationController
         if @barber.save
             render json: { 
                 message: "ok", 
-                barber: barber
+                barber: @barber
             }
         else
             render json: { 
-                message: barber.errors 
+                message: @barber.errors 
                 }, status: 500
         end
     end
@@ -45,19 +45,16 @@ class BarbersController < ApplicationController
     def update
         @barber = Barber.find(params[:id])
         @barber.update(barber_params)
-        render json: { barber: barber }
+        render json: { barber: @barber }
     end
 
     def destroy
-        render json: { message: "Im here"}, status: 204 
-        barber = Barber.find(params[:id])
-        barber.destroy
-        
+        @barber = Barber.destroy(params[:id])
+        render json: { status: 204 }     
     end
 
 
-    def set_barber
-        
+    def set_barber   
         barber = Barber.find(params[:id])
     end
 

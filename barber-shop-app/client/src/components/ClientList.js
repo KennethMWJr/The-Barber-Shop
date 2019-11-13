@@ -1,15 +1,15 @@
 import React, {Component} from "react";
 import User from "./User";
 import axios from "axios"
-import ShowBarbers from "./ShowBarbers";
-import ClientForm from "./ClientForm";
+
+
 
 class UserList extends Component {
     constructor () {
         super()
         this.state = {
             users: [],
-            renderForm: false
+            clientForm: false
         }
     }
 
@@ -23,22 +23,22 @@ class UserList extends Component {
 
     onClick = () => {
         this.setState({
-            renderForm: true
+            clientForm: true
         })
     } 
 
     render() {
-        const filteredUsers = this.state.users.filter(user => { 
+       
+        const renderList = this.state.users.map(user => {
             if (this.props.barberId == user.barber_id) {
-                return true;
+                return <User key = {user.id} user = {user}/>
             } 
 
-            return false;
-           })
-        return (<div className = "flex-container">
-              <p>Has {filteredUsers.length} waiting.</p>
-              { this.state.renderForm ? <ClientForm barberId = {this.props.barberId} /> : <button onClick = {this.onClick}  >Add yourself to list</button>}
-                </div>)
+        })
+        return (<div>
+            
+            { this.state.clientForm ? renderList : <button onClick = {this.onClick}  >Barber's list</button>}
+            </div>)
 
     }
 }

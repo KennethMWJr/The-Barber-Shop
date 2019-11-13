@@ -1,12 +1,12 @@
 import React, {Component} from "react";
-// import axios from 'axios
+import axios from 'axios'
 
 class EditClient extends Component {
     constructor(props) {
         super(props)
-        const {name, phone, email} = this.props.user
+        const {client, phone, email} = this.props.user
         this.state = {
-            name,
+            client,
             phone,
             email
         }
@@ -23,7 +23,7 @@ class EditClient extends Component {
     }
 
     async onSubmit() {
-        // let response = await axios.put(`/users/${this.props.user.id}`, this.state)
+        let response = await axios.put(`/users/${this.props.user.id}`, this.state)
         this.props.onClickEdit()
     }
 
@@ -31,13 +31,13 @@ class EditClient extends Component {
         return(
             <form onChange = {this.onChange}>
                 <label htmlFor = "name">Name:</label>
-                <input type = "text" name = "name" value = {this.state.name} />
+                <input type = "text" name = "client" defaultValue = {this.state.client} />
                     <br/>
                 <label htmlFor = "phone">Phone:</label>
-                <input type = "number" name = "phone" value = {this.state.phone} />
+                <input type = "text" name = "phone" defaultValue = {this.state.phone} />
                     <br/>
                 <label htmlFor = "email">Email:</label>
-                <input type = "text" name = "email" value = {this.state.email} />
+                <input type = "text" name = "email" defaultValue = {this.state.email} />
                 <input type = "submit" onClick = {this.onSubmit} />
             </form>
         )

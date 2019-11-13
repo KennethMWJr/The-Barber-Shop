@@ -10,6 +10,25 @@
     "react-router": "^5.1.2",
     "turbolinks": "^5.2.0"
   },
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "main": "babel.config.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
 
+  "engines": {
+    "yarn": "1.17.3"
+  },
+  
+  "scripts": {
+    "build": "yarn --cwd client install && yarn --cwd client build",
+    "deploy": "cp -a client/build/. public/",
+    "heroku-postbuild": "yarn build && yarn deploy"
+  },
+    
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
