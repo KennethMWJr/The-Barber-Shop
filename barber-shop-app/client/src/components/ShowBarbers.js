@@ -25,10 +25,9 @@ class ShowBarbers extends Component {
         return (
         <div>
              {this.state.barbers.map( (barber, i) => { 
-                  return ( <div key={i}>
-                  <p>{barber.name}</p>
+                  return ( <div className = "each-barber" key={i}>
+                  <h2 className = "barber-name">{barber.name}</h2>
                   <img src={barber.photo} alt="barber" />
-                  <p></p>
                   <UserList barberId = {barber.id} />
                   <ClientList barberId = {barber.id} />
                   </div> )

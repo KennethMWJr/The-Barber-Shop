@@ -39,7 +39,7 @@ class ClientForm extends Component {
                 <label htmlFor = "email">Email:</label>
                 <input type = "text" name = "email" defaultValue = {this.state.email} />
                     <br/>
-                <input type = "submit" onClick = {this.onSubmit} />
+                <input className = "submit" type = "submit" onClick = {this.onSubmit} />
             </form>
         )
     }

@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -19,4 +19,135 @@
 
 .App-link {
   color: #09d3ac;
+} */
+
+html {
+  width: fit-content;
+  text-align: center;
+}
+
+.background {
+  background: brown;
+  width: 100vw;
+  height: 100%;
+  margin: 0;
+ 
+}
+
+.title {
+  font-family: cursive;
+  text-align: center;
+  color: gold;
+  margin: 0 auto;
+  padding: 1vw;
+  font-size: 26px;
+}
+
+.border {
+  background: gold;
+  height: 10px;
+  width: 100vw;
+}
+
+.awning {
+  width: 100vw;
+  margin: 0 auto; 
+  padding: 0; 
+  height: 135px; 
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.sign li {
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+  height: 150px;
+  width:7.6923076923%;
+  float: left; 
+}
+
+.scallops li  {
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+  width: 7.6923076923%;
+  height: 100px;
+  float: left;
+  border-radius: 0 0 50% 50%
+
+}
+
+.blue-sign {
+  background: blue;
+}
+
+.yellow-sign {
+  background: rgb(255, 255, 1);
+}
+
+.blue-scallops {
+  background: rgb(20, 20, 167);
+}
+
+.yellow-scallops {
+  background: rgb(181, 181, 7);
+}
+
+.blue-first {
+  background: blue;
+  
+}
+
+.blue-last {
+  background: blue;
+}
+
+.blue-first-bottom {
+  background:rgb(20, 20, 167);
+}
+
+.blue-last-bottom {
+  background: blue;
+}
+
+.blue-sign-last {
+  background: blue;
+}
+
+.blue-scallops-last-bottom {
+  background: rgb(20, 20, 167);
+}
+
+.barber-name, h2 {
+  color: gold;
+}
+
+.barber-name {
+  text-decoration: underline;
+}
+
+button, .submit {
+  border: 2px solid gold;
+  background: brown;
+  color: gold;
+  border-radius: 12px;
+}
+
+label {
+  color: gold
+}
+
+input {
+  border-radius: 12px;
+}
+
+*
+img {
+  width:100vw;
+  border-radius: 50%;
+  border: 2px solid gold;
 }

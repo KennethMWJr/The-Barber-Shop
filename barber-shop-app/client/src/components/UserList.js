@@ -35,8 +35,8 @@ class UserList extends Component {
 
             return false;
            })
-        return (<div className = "flex-container">
-              <p>Has {filteredUsers.length} waiting.</p>
+        return (<div>
+              <h2>Has {filteredUsers.length} waiting</h2>
               { this.state.renderForm ? <ClientForm barberId = {this.props.barberId} /> : <button onClick = {this.onClick}  >Add yourself to list</button>}
                 </div>)
 
