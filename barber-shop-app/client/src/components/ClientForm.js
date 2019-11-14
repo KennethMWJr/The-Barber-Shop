@@ -34,12 +34,16 @@ class ClientForm extends Component {
                 <input type = "text" name = "name" defaultValue = {this.state.name} />
                     <br/>
                 <label htmlFor = "phone">Phone:</label>
-                <input type = "text" name = "phone" defaultValue = {this.state.phone} />
+                <input type = "text" name = "phone" placeholder = "##########" defaultValue = {this.state.phone} />
                     <br/>
                 <label htmlFor = "email">Email:</label>
+                
                 <input type = "text" name = "email" defaultValue = {this.state.email} />
                     <br/>
+                <div className = "button-alignment">
                 <input className = "submit" type = "submit" onClick = {this.onSubmit} />
+                <button onClick = {this.props.onClick}>Return</button>
+                </div>
             </form>
         )
     }

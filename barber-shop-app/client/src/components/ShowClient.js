@@ -9,6 +9,10 @@ function ShowClient(props) {
         console.log(deleted)
     }
 
+    function refreshPage() {
+        window.location.reload()
+    }
+
     return(
         <div>
             <p>{props.user.client}</p>
@@ -16,6 +20,7 @@ function ShowClient(props) {
             <p>{props.user.email}</p>
             <button onClick = {props.onClickEdit}>Edit</button>
             <button onClick = {handleDelete}>Delete</button>
+            <button onClick = {refreshPage}>Return</button>
         </div>
     )
 }

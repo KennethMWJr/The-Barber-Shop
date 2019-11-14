@@ -8,7 +8,7 @@ import './App.css';
 class App extends Component {
   render () {
   return (
-    <div className = "background">
+    <div className = "background main-container">
       <div className = "title">
       <h1>The Barber Shop</h1>
       </div>
@@ -51,8 +51,9 @@ class App extends Component {
           </ul>
         </div>
       </div>
-
+      <div className = "show-barber">
        <ShowBarbers />
+      </div>
     </div>
   );
 }

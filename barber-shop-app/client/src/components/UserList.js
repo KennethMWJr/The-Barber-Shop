@@ -35,7 +35,7 @@ class UserList extends Component {
 
             return false;
            })
-        return (<div>
+        return (<div className = "user-list">
               <h2>Has {filteredUsers.length} waiting</h2>
               { this.state.renderForm ? <ClientForm barberId = {this.props.barberId} /> : <button onClick = {this.onClick}  >Add yourself to list</button>}
                 </div>)

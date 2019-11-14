@@ -49,16 +49,20 @@ html {
   width: 100vw;
 }
 
-.awning {
+/* .awning {
   width: 100vw;
   margin: 0 auto; 
   padding: 0; 
   height: 135px; 
-}
+} */
 
 ul {
   margin: 0;
   padding: 0;
+}
+
+h1 {
+  margin: 0;
 }
 
 .sign li {
@@ -77,7 +81,8 @@ ul {
   width: 7.6923076923%;
   height: 100px;
   float: left;
-  border-radius: 0 0 50% 50%
+  border-radius: 0 0 50% 50%;
+  box-shadow: 0 0.5px 0 0.5px gold;
 
 }
 
@@ -124,6 +129,8 @@ ul {
 
 .barber-name, h2 {
   color: gold;
+  display: block;
+  margin: 0 auto 5px;
 }
 
 .barber-name {
@@ -135,19 +142,58 @@ button, .submit {
   background: brown;
   color: gold;
   border-radius: 12px;
+  display: block;
+  margin: 0 auto 5px;
+  font-size: 20px;
 }
 
 label {
-  color: gold
+  color: gold;
+  font-size: 20px;
 }
 
 input {
   border-radius: 12px;
 }
 
-*
+
 img {
-  width:100vw;
+  max-width:360px;
+  max-height:562.5px;
   border-radius: 50%;
   border: 2px solid gold;
 }
+
+form {
+  border: 2px solid gold;
+}
+
+.barbers-parent {
+  width: 100vw;
+}
+
+.barber-container {
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 10px;
+  padding: 10px;
+}
+
+.main-container {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.each-barber {
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+
+
+

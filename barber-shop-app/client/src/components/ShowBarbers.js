@@ -23,16 +23,18 @@ class ShowBarbers extends Component {
 
     render() {
         return (
-        <div>
-             {this.state.barbers.map( (barber, i) => { 
-                  return ( <div className = "each-barber" key={i}>
-                  <h2 className = "barber-name">{barber.name}</h2>
-                  <img src={barber.photo} alt="barber" />
-                  <UserList barberId = {barber.id} />
-                  <ClientList barberId = {barber.id} />
-                  </div> )
-             })} 
+        <div className = "barbers-parent">
+            <div className = "barber-container">
+                {this.state.barbers.map( (barber, i) => { 
+                    return ( <div className = "each-barber" key={i}>
+                    <h2 className = "barber-name">{barber.name}</h2>
+                    <img src={barber.photo} alt="barber" />
+                    <UserList barberId = {barber.id} />
+                    <ClientList barberId = {barber.id} />
+                    </div> )
+                })} 
 
+            </div>
         </div>
         )
     }

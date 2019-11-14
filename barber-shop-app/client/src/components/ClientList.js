@@ -25,6 +25,7 @@ class UserList extends Component {
         this.setState({
             clientForm: true
         })
+        
     } 
 
     render() {
@@ -37,7 +38,7 @@ class UserList extends Component {
         })
         return (<div>
             
-            { this.state.clientForm ? renderList : <button onClick = {this.onClick}  >Barber's list</button>}
+            { this.state.clientForm ? renderList : <button onClick = {this.onClick}>Barber's list</button>}
             </div>)
 
     }
