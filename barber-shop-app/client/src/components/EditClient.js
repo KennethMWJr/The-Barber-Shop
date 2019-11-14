@@ -38,7 +38,7 @@ class EditClient extends Component {
                     <br/>
                 <label htmlFor = "email">Email:</label>
                 <input type = "text" name = "email" defaultValue = {this.state.email} />
-                <input type = "submit" onClick = {this.onSubmit} />
+                <input className = "submit" type = "submit" onClick = {this.onSubmit} />
             </form>
         )
     }

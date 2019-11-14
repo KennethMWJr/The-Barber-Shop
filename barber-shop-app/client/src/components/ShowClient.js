@@ -14,13 +14,17 @@ function ShowClient(props) {
     }
 
     return(
-        <div>
-            <p>{props.user.client}</p>
-            <p>{props.user.phone}</p>
-            <p>{props.user.email}</p>
-            <button onClick = {props.onClickEdit}>Edit</button>
-            <button onClick = {handleDelete}>Delete</button>
-            <button onClick = {refreshPage}>Return</button>
+        <div className = "client-container">
+            <div className = "client-list">
+                <p>{props.user.client}</p>
+                <p>{props.user.phone}</p>
+                <p>{props.user.email}</p>
+                <div className = "buttons-format">
+                <button onClick = {props.onClickEdit}>Edit</button>
+                <button onClick = {handleDelete}>Delete</button>
+                <button onClick = {refreshPage}>Return</button>
+                </div>
+            </div>
         </div>
     )
 }

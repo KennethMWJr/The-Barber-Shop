@@ -27,7 +27,7 @@ html {
 }
 
 .background {
-  background: brown;
+  background: rgb(160,82,45);
   width: 100vw;
   height: 100%;
   margin: 0;
@@ -38,13 +38,15 @@ html {
   font-family: cursive;
   text-align: center;
   color: gold;
-  margin: 0 auto;
-  padding: 1vw;
+  margin: 0;
+  padding: 0;
   font-size: 26px;
+  background: rgb(47,33,26);
+
 }
 
 .border {
-  background: gold;
+  background: rgb(181, 181, 7);
   height: 10px;
   width: 100vw;
 }
@@ -91,7 +93,7 @@ h1 {
 }
 
 .yellow-sign {
-  background: rgb(255, 255, 1);
+  background: gold
 }
 
 .blue-scallops {
@@ -127,7 +129,14 @@ h1 {
   background: rgb(20, 20, 167);
 }
 
-.barber-name, h2 {
+.barber-name {
+  color: gold;
+  display: block;
+  margin: 0 auto 5px;
+  font-family: cursive;
+}
+
+h2 {
   color: gold;
   display: block;
   margin: 0 auto 5px;
@@ -139,12 +148,24 @@ h1 {
 
 button, .submit {
   border: 2px solid gold;
-  background: brown;
+  background: rgb(160,82,45);
   color: gold;
   border-radius: 12px;
   display: block;
-  margin: 0 auto 5px;
+  margin: 0 auto;
   font-size: 20px;
+}
+
+button:hover, .submit:hover {
+  background: rgb(47,33,26);
+}
+
+.buttons-format {
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-height: 30px;
 }
 
 label {
@@ -154,6 +175,7 @@ label {
 
 input {
   border-radius: 12px;
+  
 }
 
 
@@ -193,6 +215,12 @@ form {
   margin: 0 auto;
   padding: 10px;
 }
+
+.footer {
+  background-color: rgb(47,33,26);
+}
+
+
 
 
 
