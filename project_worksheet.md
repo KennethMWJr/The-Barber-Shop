@@ -1,5 +1,7 @@
 # Project Overview
 
+A full stack app that applies CRUD in frontend and backend for the purpose of creating a queuing system for a barber shop.
+
 ## Project Schedule
 
 This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
@@ -10,10 +12,10 @@ You are **responsible** for attending squad standup at the begining and end of t
 |---|---| ---|
 |Day 1| Project Description | complete
 |Day 2| Wireframes / Priority Matrix / Functional Components | complete
-|Day 3| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Day 4| Pseudocode / actual code | Incomplete
-|Day 5| Initial Clickable Model  | Incomplete
-|Day 6| MVP | Incomplete
+|Day 3| Core Application Structure (HTML, CSS, etc.) | complete
+|Day 4| Pseudocode / actual code | complete
+|Day 5| Initial Clickable Model  | complete
+|Day 6| MVP | complete
 |Day 7| Present | Incomplete
 
 
@@ -21,18 +23,24 @@ You are **responsible** for attending squad standup at the begining and end of t
 
 Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
 
-It's an app for queuing a barber for a haircut. Nonetheless, it could apply for various scenarios beyond this one.  There will be three barbers to choose from and someone wanting a haircut can add their name to only one barber's waiting list. 
+Have you ever gone to a barber shop or a hair salon and waited for an unknown amount of time to get your hair done? As you wait, you see person after person go before you and you don't know how many more people are ahead of you.
 
-The barbers have access to only their respective list.  Each will be able to apply CRUD to their respective list as well. When the barbers log into the app, they will see all their waiting lists. They will also be able to indicate their schedule for that day (i.e. time in, time out, out sick, or not in today).  
+This app allows for users to see how many people are on a barber's waiting list, add their names to a specific waitlist,  edit the information they've provided and remove their name from any waiting list.  
 
-Clients don't have to log in to add their name to a barber's waiting list. They can go to the app and see how many people each barber has in their queu and select which waitlist to enter.  The client can put their username along with a form of contact (i.e. phone number or email ).  Clients will be informed each time their positions on the waiting list change. They can remove themselves from a list and add themselves to another list.  Each client will be notified when they are next for a haircut. 
+
+Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+
+Essentially it's an app for queuing a barber for a haircut. Nonetheless, this framework could apply for various scenarios beyond this one.  There will be three barbers to choose from and someone wanting a haircut could add their name a barber's waiting list. 
+
 
 ## Wireframes
 
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe.
 
 See "Mobile-first design" and "Desktop layout":
-https://www.figma.com/file/BQLbVHUzP7E7Whu0gC0SMd/Wireframing-Copy?node-id=89402%3A248
+https://www.figma.com/file/BQLbVHUzP7E7Whu0gC0SMd/Wireframing-Copy?node-id=0%3A1
+
+https://www.figma.com/file/BQLbVHUzP7E7Whu0gC0SMd/Wireframing-Copy?node-id=89364%3A480
 
 ## Priority Matrix
 
@@ -40,7 +48,7 @@ Include a full list of features that have been prioritized based on the `Time an
 
 See "Priority Matrix" page:
 
-https://www.figma.com/file/BQLbVHUzP7E7Whu0gC0SMd/Wireframing-Copy?node-id=89402%3A248
+https://www.figma.com/file/BQLbVHUzP7E7Whu0gC0SMd/Wireframing-Copy?node-id=89402%3A231
 
 ### MVP/PostMVP - 5min
 
@@ -56,7 +64,9 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 #### PostMVP 
 
-- Barber's can log in with User Auth to see their queue
+- Barbers can log in with Authentication to access their individual queue.
+- Users can log in to edit and remove their name from a queu.
+- Prevent clients from adding themselves to multiple barbers.
 
 
 
@@ -74,7 +84,7 @@ Create the ERD model for your project
 
 See "ERD" page:
 
-https://www.figma.com/file/BQLbVHUzP7E7Whu0gC0SMd/Wireframing-Copy?node-id=89402%3A248
+https://www.figma.com/file/BQLbVHUzP7E7Whu0gC0SMd/Wireframing-Copy?node-id=89403%3A0
 
 ## UI Components
 
@@ -85,13 +95,13 @@ See components page
 
 | Component | Description | 
 | --- | :---: |  
-| Header | This will render the header include the nav | 
-| Nav | Will provide links to pages |
-| Main | Will render info for each page |
+| ShowBarbers | Renders barbers by name and photo | 
+| UserList | grabs users list with axios and filters list by barber id to create a list for each barber |
+| ClientList | grabs users list toggles between rendering list of clients and button for adding client to list |
 | Client Form | Will render a form for users to create clients |
-| Barber Login | Will render a login form |
-| # of Clients | Will provide number of clients for each barber |
-| List of Clients | Will render list of clients for each barber |
+| User | toggles between components, EditClient and ShowClient |
+| EditClient | Updates information created in ClientForm|
+| ShowClient| Renders client information added to list along with the edit and delete functions  |
 | Footer | This will render the footer |
 
 
@@ -101,17 +111,17 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: |
-| Adding Form | H | 3hrs|  |
-| Review | H | 5 hrs | |
-| Creating Frontend logic | H | 5 hrs |
-| Working with API | H | 3hrs| |
-| Scaffolding | H | 6 hrs | |
-| Frontend CRUD | H | 4 hrs |
-| Backend CRUD | H | 10 hrs | |
-| Styling | H | 10 hrs | |
-| Deployment | H | 6 hrs | |
-| troubleshooting | H | 5 hrs | | 
-| Total | H | 50hrs| | 
+| Adding Form | H | 3hrs| 10hrs |
+| Review | H | 5 hrs | 8hrs | 
+| Creating Frontend logic | H | 5 hrs | 8hr |
+| Working with API | H | 3hrs| 16hrs |
+| Scaffolding | H | 6 hrs | 4hrs |
+| Frontend CRUD | H | 4 hrs | 4hrs |
+| Backend CRUD | H | 10 hrs | 14hrs |
+| Styling | H | 10 hrs | 10hrs |
+| Deployment | H | 6 hrs | 2hrs |
+| troubleshooting | H | 5 hrs | 6hrs | 
+| Total | H | 50hrs| 82hrs | 
 
 ## Helper Functions
 Helper functions should be generic enough that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
@@ -119,28 +129,41 @@ Helper functions should be generic enough that they can be reused in other appli
 #### SAMPLE.....
 | Function | Description | 
 | --- | :---: |  
-| Capitalize | This will capitalize the first letter in a string of text | 
+| Map | Method for accessing content in an array | 
+| Filter | Method for organizng content in one array into new arrays based on condtions while not altering original array|
+| Ternary | Syntax that helped me conceptualize the toggle affect for buttons and rendering components.
 
 ## Additional Libraries
  Use this section to list all supporting libraries and thier role in the project. 
+
+
  
- #### SAMPLE.....
+ 
 | Library | What it Does | 
 | --- | :---: |  
-| Bootstrap | Used to help style my application | 
-| Giphy API | Used to get gifs to use | 
+| axios | used for making API calls | 
+
 
 
 ## Code Snippet
 
 Use this section to include a brief code snippet of functionality that you are proud of an a brief description  
 
-#### SAMPLE.....
-```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-```
+ render() {
+ <!-- filter through array of objects containing users and match their respect barber id with the id of the barber -->
+        const filteredUsers = this.state.users.filter(user => { 
+            if (this.props.barberId == user.barber_id) {
+                return true;
+            } 
+            return false;
+           })
+        return (<div className = "user-list">
+                {/* renders number of clients waiting for each barber */}
+              <h2>Has {filteredUsers.length} waiting</h2>
+              {/* toggles between button and ClientForm, which is a component */}
+              { this.state.renderForm ? <ClientForm toggleForm = {this.onClick} barberId = {this.props.barberId} /> : <button onClick = {this.onClick}>Add yourself to list</button>}
+                </div>)
+    }
 
 ## Change Log
  Use this section to document what changes were made and the reasoning behind those changes.  
@@ -148,7 +171,7 @@ function reverse(string) {
 #### SAMPLE.....
 | Original Plan | Outcome | 
 | --- | :---: |  
-| Have one Book component | Split that component into BookInfo and BookInteraction as the component grew too complicated | 
+| Removed Header, Nav, and Main components | Discovered they weren't necessary in this project though I always have used them in previous ones | 
 
 ## Issues and Resolutions
  Use this section to list of all major issues encountered and their resolution.
