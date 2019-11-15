@@ -1,7 +1,5 @@
 import React, {Component} from "react";
-import User from "./User";
 import axios from "axios"
-import ShowBarbers from "./ShowBarbers";
 import ClientForm from "./ClientForm";
 
 class UserList extends Component {
@@ -23,11 +21,13 @@ class UserList extends Component {
 
     onClick = () => {
         this.setState({
-            renderForm: true
+            renderForm: !this.state.renderForm
         })
     } 
 
+
     render() {
+        // filter through array of objects containing users and match their respect barber id with the id of the barber
         const filteredUsers = this.state.users.filter(user => { 
             if (this.props.barberId == user.barber_id) {
                 return true;
@@ -36,8 +36,11 @@ class UserList extends Component {
             return false;
            })
         return (<div className = "user-list">
+                {/* renders number of clients waiting for each barber */}
               <h2>Has {filteredUsers.length} waiting</h2>
-              { this.state.renderForm ? <ClientForm barberId = {this.props.barberId} /> : <button onClick = {this.onClick}  >Add yourself to list</button>}
+              {/* toggles between button and ClientForm, which is a component */}
+              { this.state.renderForm ? <ClientForm toggleForm = {this.onClick} barberId = {this.props.barberId} /> : <button onClick = {this.onClick}>Add yourself to list</button>}
+                
                 </div>)
 
     }

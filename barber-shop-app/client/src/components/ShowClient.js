@@ -9,9 +9,6 @@ function ShowClient(props) {
         console.log(deleted)
     }
 
-    function refreshPage() {
-        window.location.reload()
-    }
 
     return(
         <div className = "client-container">
@@ -22,7 +19,7 @@ function ShowClient(props) {
                 <div className = "buttons-format">
                 <button onClick = {props.onClickEdit}>Edit</button>
                 <button onClick = {handleDelete}>Delete</button>
-                <button onClick = {refreshPage}>Return</button>
+                <button onClick = {props.goBack}>Return</button>
                 </div>
             </div>
         </div>

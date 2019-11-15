@@ -11,8 +11,9 @@ class App extends Component {
   return (
     <div className = "background main-container">
       <div className = "title">
-      <h1>The Barber Shop</h1>
+      <h1> <img className="barber-pole" src="https://library.kissclipart.com/20180918/pvw/kissclipart-barber-pole-clipart-barbers-pole-clip-art-a29f15c928695fa0.jpg" alt="Barber Pole"/>The Barber Shop</h1>
       </div>
+      {/* Everything between "awning" div tags used to create awning in css */}
       <div className = "awning">
         <div className = "border"></div>
         <div className = "sign">
@@ -32,7 +33,7 @@ class App extends Component {
           <li className = "blue-sign-last"></li>
         </ul>
         </div>
-        <div class ="scallops">
+        <div className ="scallops">
           <ul>
           {/* <li className = "blue"></li> */}
           <li className = "blue-first-bottom"></li>

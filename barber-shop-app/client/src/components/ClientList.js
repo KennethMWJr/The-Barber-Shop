@@ -4,7 +4,7 @@ import axios from "axios"
 
 
 
-class UserList extends Component {
+class ClientList extends Component {
     constructor () {
         super()
         this.state = {
@@ -23,7 +23,7 @@ class UserList extends Component {
 
     onClick = () => {
         this.setState({
-            clientForm: true
+            clientForm: !this.state.clientForm
         })
         
     } 
@@ -32,16 +32,16 @@ class UserList extends Component {
        
         const renderList = this.state.users.map(user => {
             if (this.props.barberId == user.barber_id) {
-                return <User key = {user.id} user = {user}/>
+                return <User goBack = {this.onClick} key = {user.id} user = {user}/>
             } 
 
         })
-        return (<div>
-            
+        return (<div className = "barber-list">
+            {/* toggles between list of clients and button */}
             { this.state.clientForm ? renderList : <button onClick = {this.onClick}>Barber's list</button>}
             </div>)
 
     }
 }
 
-export default UserList;
+export default ClientList;

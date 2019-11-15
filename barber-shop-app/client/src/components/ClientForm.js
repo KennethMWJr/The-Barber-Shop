@@ -8,7 +8,9 @@ class ClientForm extends Component {
             name: "",
             phone: "",
             email: "",
-            barber_id: props.barberId
+            barber_id: props.barberId,
+           
+    
         }
         this.onChange = this.onChange.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
@@ -27,11 +29,15 @@ class ClientForm extends Component {
         let response = await axios.post("/users", this.state)
     }
 
+  
+    
+
     render() {
+
         return(
             <form onChange = {this.onChange}>
                 <label htmlFor = "name">Name:</label>
-                <input type = "text" name = "name" defaultValue = {this.state.name} />
+                <input type = "text" name = "client" defaultValue = {this.state.client} />
                     <br/>
                 <label htmlFor = "phone">Phone:</label>
                 <input type = "text" name = "phone" placeholder = "##########" defaultValue = {this.state.phone} />
@@ -41,8 +47,8 @@ class ClientForm extends Component {
                 <input type = "text" name = "email" defaultValue = {this.state.email} />
                     <br/>
                 <div className = "button-alignment">
-                <input className = "submit" type = "submit" onClick = {this.onSubmit} />
-                <button onClick = {this.props.onClick}>Return</button>
+                <button type = "button" onClick = {this.props.toggleForm}>Return</button>
+                <input className = "submit-form" type = "submit" onClick = {this.onSubmit} />
                 </div>
             </form>
         )

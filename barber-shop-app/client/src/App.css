@@ -45,6 +45,10 @@ html {
 
 }
 
+.barber-pole {
+  max-height: 41px;
+}
+
 .border {
   background: rgb(181, 181, 7);
   height: 10px;
@@ -156,6 +160,19 @@ button, .submit {
   font-size: 20px;
 }
 
+.submit-form {
+  border: 2px solid gold;
+  background: rgb(160,82,45);
+  color: gold;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+  font-size: 20px;
+  
+  
+
+}
+
 button:hover, .submit:hover {
   background: rgb(47,33,26);
 }
@@ -166,6 +183,14 @@ button:hover, .submit:hover {
   flex-wrap: wrap;
   justify-content: space-evenly;
   max-height: 30px;
+}
+
+.button-alignment {
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+
 }
 
 label {
@@ -192,6 +217,8 @@ form {
 
 .barbers-parent {
   width: 100vw;
+  max-height: 600px;
+  overflow: scroll;
 }
 
 .barber-container {
@@ -201,6 +228,9 @@ form {
   justify-content: space-evenly;
   margin: 10px;
   padding: 10px;
+  max-height: 600px;
+  
+  
 }
 
 .main-container {
@@ -213,11 +243,24 @@ form {
 .each-barber {
   max-width: 375px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 10px; 
+
+
 }
+
 
 .footer {
   background-color: rgb(47,33,26);
+  color: brown
+}
+
+a {
+  color: tan;
+}
+
+.barber-list {
+  height: 132px;
+  overflow: scroll;
 }
 
 

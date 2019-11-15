@@ -17,7 +17,7 @@ class User extends Component {
 
     render() {
         return( <div className = "card">
-            { this.state.isFlipped ? <EditClient user = {this.props.user} onClick/> : <ShowClient user = {this.props.user} onClickEdit = {this.onClickEdit}/>}
+            { this.state.isFlipped ? <EditClient user = {this.props.user} onClick/> : <ShowClient goBack = {this.props.goBack} user = {this.props.user} onClickEdit = {this.onClickEdit}/>}
                 </div>)
     }
 }

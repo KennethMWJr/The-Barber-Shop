@@ -24,7 +24,7 @@ class EditClient extends Component {
 
     async onSubmit() {
         let response = await axios.put(`/users/${this.props.user.id}`, this.state)
-        this.props.onClickEdit()
+        
     }
 
     render() {
