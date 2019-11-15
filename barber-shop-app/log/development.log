@@ -45979,3 +45979,103 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 1718)
 
 
+Started GET "/barbers" for 127.0.0.1 at 2019-11-15 10:11:33 -0500
+  [1m[35m (28.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BarbersController#index as HTML
+  [1m[36mBarber Load (4.2ms)[0m  [1m[34mSELECT "barbers".* FROM "barbers"[0m
+  ↳ app/controllers/barbers_controller.rb:7:in `index'
+Completed 200 OK in 80ms (Views: 8.9ms | ActiveRecord: 63.4ms | Allocations: 5801)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 10:11:35 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (13.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 38ms (Views: 17.4ms | ActiveRecord: 15.6ms | Allocations: 6745)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 10:11:35 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.3ms | Allocations: 1735)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 10:11:35 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.3ms | Allocations: 1735)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 10:11:35 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.3ms | Allocations: 1735)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 10:11:35 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.3ms | Allocations: 1718)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 10:11:35 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.3ms | Allocations: 1718)
+
+
+Started GET "/barbers" for 127.0.0.1 at 2019-11-15 10:22:27 -0500
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BarbersController#index as HTML
+  [1m[36mBarber Load (0.6ms)[0m  [1m[34mSELECT "barbers".* FROM "barbers"[0m
+  ↳ app/controllers/barbers_controller.rb:7:in `index'
+Completed 200 OK in 20ms (Views: 5.3ms | ActiveRecord: 7.8ms | Allocations: 5801)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 10:22:27 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (18.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 36ms (Views: 11.2ms | ActiveRecord: 20.5ms | Allocations: 6748)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 10:22:27 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 1735)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 10:22:27 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.2ms | Allocations: 1735)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 10:22:27 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.6ms | Allocations: 1718)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 10:22:27 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.2ms | Allocations: 1718)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 10:22:27 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (23.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 27ms (Views: 4.0ms | ActiveRecord: 23.2ms | Allocations: 1718)
+
+
