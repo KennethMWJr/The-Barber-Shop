@@ -46079,3 +46079,411 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 27ms (Views: 4.0ms | ActiveRecord: 23.2ms | Allocations: 1718)
 
 
+Started POST "/users" for ::1 at 2019-11-15 11:58:45 -0500
+Started GET "/?client=Kenneth+Williams&phone=2126025306&email=" for ::1 at 2019-11-15 11:58:45 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"", "phone"=>"2126025306", "email"=>"", "barber_id"=>2, "client"=>"Kenneth Williams", "user"=>{"client"=>"Kenneth Williams", "phone"=>"2126025306", "email"=>"", "barber_id"=>2}}
+[31mUnpermitted parameters: :name, :user[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"client"=>"Kenneth Williams", "phone"=>"2126025306", "email"=>""}
+  Rendering /Users/kennethwilliams/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  [1m[35m (114.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:34:in `create'
+  Rendered /Users/kennethwilliams/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 26.2ms | Allocations: 1159)
+Completed 200 OK in 56ms (Views: 39.3ms | ActiveRecord: 0.0ms | Allocations: 2436)
+
+
+  [1m[36mBarber Load (58.1ms)[0m  [1m[34mSELECT "barbers".* FROM "barbers" WHERE "barbers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34:in `create'
+  [1m[36mUser Create (82.9ms)[0m  [1m[32mINSERT INTO "users" ("client", "phone", "email", "barber_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["client", "Kenneth Williams"], ["phone", "2126025306"], ["email", ""], ["barber_id", 2], ["created_at", "2019-11-15 16:58:46.404012"], ["updated_at", "2019-11-15 16:58:46.404012"]]
+  ↳ app/controllers/users_controller.rb:34:in `create'
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:34:in `create'
+Completed 200 OK in 460ms (Views: 1.1ms | ActiveRecord: 278.6ms | Allocations: 10386)
+
+
+Started GET "/?client=Kenneth+Williams&phone=2126025306&email=" for ::1 at 2019-11-15 11:59:58 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"client"=>"Kenneth Williams", "phone"=>"2126025306", "email"=>""}
+  Rendering /Users/kennethwilliams/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kennethwilliams/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.1ms | Allocations: 191)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 727)
+
+
+Started GET "/?client=Kenneth+Williams&phone=2126025306&email=" for ::1 at 2019-11-15 11:59:59 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"client"=>"Kenneth Williams", "phone"=>"2126025306", "email"=>""}
+  Rendering /Users/kennethwilliams/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kennethwilliams/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 7)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 234)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-11-15 12:00:13 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"", "phone"=>"2126025306", "email"=>"", "barber_id"=>2, "client"=>"Kenneth Williams", "user"=>{"client"=>"Kenneth Williams", "phone"=>"2126025306", "email"=>"", "barber_id"=>2}}
+[31mUnpermitted parameters: :name, :user[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:34:in `create'
+  [1m[36mBarber Load (0.2ms)[0m  [1m[34mSELECT "barbers".* FROM "barbers" WHERE "barbers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("client", "phone", "email", "barber_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["client", "Kenneth Williams"], ["phone", "2126025306"], ["email", ""], ["barber_id", 2], ["created_at", "2019-11-15 17:00:13.227471"], ["updated_at", "2019-11-15 17:00:13.227471"]]
+  ↳ app/controllers/users_controller.rb:34:in `create'
+  [1m[35m (32.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:34:in `create'
+Completed 200 OK in 46ms (Views: 0.4ms | ActiveRecord: 32.9ms | Allocations: 3553)
+
+
+Started GET "/barbers" for 127.0.0.1 at 2019-11-15 12:00:13 -0500
+Processing by BarbersController#index as HTML
+  [1m[36mBarber Load (0.7ms)[0m  [1m[34mSELECT "barbers".* FROM "barbers"[0m
+  ↳ app/controllers/barbers_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.7ms | Allocations: 1228)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 12:00:13 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.6ms | Allocations: 2000)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 12:00:13 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.4ms | Allocations: 2000)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 12:00:13 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.4ms | Allocations: 2000)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 12:00:13 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 12:00:13 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 2001)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 12:00:13 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 2000)
+
+
+Started DELETE "/users/23" for 127.0.0.1 at 2019-11-15 12:00:29 -0500
+Processing by UsersController#destroy as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:53:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:53:in `destroy'
+  [1m[36mUser Destroy (4.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 23]]
+  ↳ app/controllers/users_controller.rb:53:in `destroy'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:53:in `destroy'
+Completed 200 OK in 17ms (Views: 0.4ms | ActiveRecord: 9.7ms | Allocations: 2456)
+
+
+Started GET "/barbers" for 127.0.0.1 at 2019-11-15 12:00:29 -0500
+Processing by BarbersController#index as HTML
+  [1m[36mBarber Load (0.3ms)[0m  [1m[34mSELECT "barbers".* FROM "barbers"[0m
+  ↳ app/controllers/barbers_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 1227)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 12:00:30 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 4.7ms | ActiveRecord: 3.9ms | Allocations: 1859)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 12:00:30 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 3.1ms | Allocations: 1859)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 12:00:30 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.3ms | Allocations: 1859)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 12:00:30 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 1859)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 12:00:30 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 1859)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 12:00:30 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1859)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-11-15 13:37:01 -0500
+Started GET "/barbers" for 127.0.0.1 at 2019-11-15 13:37:02 -0500
+Processing by BarbersController#index as HTML
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"", "phone"=>"9178888888", "email"=>"kwilliam08@gmail.com", "barber_id"=>3, "client"=>"Kenneth", "user"=>{"client"=>"Kenneth", "phone"=>"9178888888", "email"=>"kwilliam08@gmail.com", "barber_id"=>3}}
+[31mUnpermitted parameters: :name, :user[0m
+  [1m[35m (4.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:34:in `create'
+  [1m[36mBarber Load (37.0ms)[0m  [1m[34mSELECT "barbers".* FROM "barbers"[0m
+  ↳ app/controllers/barbers_controller.rb:7:in `index'
+  [1m[36mBarber Load (7.0ms)[0m  [1m[34mSELECT "barbers".* FROM "barbers" WHERE "barbers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 61ms (Views: 21.2ms | ActiveRecord: 37.0ms | Allocations: 2611)
+
+
+  ↳ app/controllers/users_controller.rb:34:in `create'
+Started GET "/users" for 127.0.0.1 at 2019-11-15 13:37:02 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.4ms | Allocations: 1859)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 13:37:02 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.2ms | Allocations: 1859)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 13:37:02 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 1859)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 13:37:02 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Create (88.4ms)[0m  [1m[32mINSERT INTO "users" ("client", "phone", "email", "barber_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["client", "Kenneth"], ["phone", "9178888888"], ["email", "kwilliam08@gmail.com"], ["barber_id", 3], ["created_at", "2019-11-15 18:37:02.365167"], ["updated_at", "2019-11-15 18:37:02.365167"]]
+  ↳ app/controllers/users_controller.rb:34:in `create'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 1.2ms | Allocations: 2508)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 13:37:02 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1859)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 13:37:02 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.2ms | Allocations: 1859)
+
+
+  [1m[35m (25.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:34:in `create'
+Completed 200 OK in 174ms (Views: 0.3ms | ActiveRecord: 125.5ms | Allocations: 21261)
+
+
+Started GET "/barbers" for 127.0.0.1 at 2019-11-15 13:37:09 -0500
+Processing by BarbersController#index as HTML
+  [1m[36mBarber Load (1.1ms)[0m  [1m[34mSELECT "barbers".* FROM "barbers"[0m
+  ↳ app/controllers/barbers_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 1.1ms | Allocations: 1228)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 13:37:09 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 2000)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 13:37:09 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 2000)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 13:37:09 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 13:37:09 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 2000)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 13:37:09 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 13:37:09 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started PUT "/users/3" for 127.0.0.1 at 2019-11-15 13:37:52 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"client"=>"D Rose", "phone"=>"9173839070", "email"=>"jalen@yahoo.com", "id"=>"3", "user"=>{"client"=>"D Rose", "phone"=>"9173839070", "email"=>"jalen@yahoo.com"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:47:in `update'
+[31mUnpermitted parameters: :id, :user[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:48:in `update'
+  [1m[36mBarber Load (0.2ms)[0m  [1m[34mSELECT "barbers".* FROM "barbers" WHERE "barbers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:48:in `update'
+  [1m[36mUser Update (28.0ms)[0m  [1m[33mUPDATE "users" SET "client" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["client", "D Rose"], ["updated_at", "2019-11-15 18:37:52.716611"], ["id", 3]]
+  ↳ app/controllers/users_controller.rb:48:in `update'
+Started GET "/barbers" for 127.0.0.1 at 2019-11-15 13:37:52 -0500
+Processing by BarbersController#index as HTML
+  [1m[36mBarber Load (0.4ms)[0m  [1m[34mSELECT "barbers".* FROM "barbers"[0m
+  ↳ app/controllers/barbers_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 1227)
+
+
+  [1m[35m (16.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:48:in `update'
+Completed 200 OK in 72ms (Views: 1.0ms | ActiveRecord: 45.4ms | Allocations: 6263)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 13:37:52 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 2000)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 13:37:52 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 2000)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 13:37:52 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 2000)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 13:37:52 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 2000)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 13:37:52 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 2001)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 13:37:52 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 2000)
+
+
+Started DELETE "/users/3" for 127.0.0.1 at 2019-11-15 13:38:07 -0500
+Processing by UsersController#destroy as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:53:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:53:in `destroy'
+  [1m[36mUser Destroy (6.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/users_controller.rb:53:in `destroy'
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:53:in `destroy'
+Completed 200 OK in 21ms (Views: 1.0ms | ActiveRecord: 11.3ms | Allocations: 2324)
+
+
+Started GET "/barbers" for 127.0.0.1 at 2019-11-15 13:38:07 -0500
+Processing by BarbersController#index as HTML
+  [1m[36mBarber Load (0.5ms)[0m  [1m[34mSELECT "barbers".* FROM "barbers"[0m
+  ↳ app/controllers/barbers_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.5ms | Allocations: 1227)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 13:38:07 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.6ms | Allocations: 1859)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 13:38:07 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1859)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 13:38:07 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 1859)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 13:38:07 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 1859)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 13:38:07 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 215ms (Views: 214.2ms | ActiveRecord: 0.2ms | Allocations: 1863)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-11-15 13:38:07 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 1859)
+
+
