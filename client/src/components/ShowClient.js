@@ -3,7 +3,7 @@ import axios from "axios"
 
 function ShowClient(props) {
     async function handleDelete() {
-    let deleted = await axios.delete(`/users/${props.user.id}`)
+    let deleted = await axios.delete(`https://limitless-citadel-56053.herokuapp.com/users/${props.user.id}`)
     window.location.reload()
     // refresh page on delete
         console.log(deleted)

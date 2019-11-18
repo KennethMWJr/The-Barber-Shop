@@ -12,7 +12,7 @@ class ShowBarbers extends Component {
     }
 
     componentDidMount = async () => {
-        let response = await axios.get("/barbers")
+        let response = await axios.get("https://limitless-citadel-56053.herokuapp.com/barbers")
         console.log(response.data)
         let barbers = response.data.barber;
         this.setState({

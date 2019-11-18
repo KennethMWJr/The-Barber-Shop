@@ -23,7 +23,7 @@ class EditClient extends Component {
     }
 
     async onSubmit() {
-        let response = await axios.put(`/users/${this.props.user.id}`, this.state)
+        let response = await axios.put(`https://limitless-citadel-56053.herokuapp.com/users/${this.props.user.id}`, this.state)
         
     }
 

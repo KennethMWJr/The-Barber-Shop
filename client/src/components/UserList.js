@@ -12,7 +12,7 @@ class UserList extends Component {
     }
 
     componentDidMount = async () => {
-        let response = await axios.get("/users")
+        let response = await axios.get("https://limitless-citadel-56053.herokuapp.com/users")
         console.log(response.data.user)
         this.setState({
             users: response.data.user
