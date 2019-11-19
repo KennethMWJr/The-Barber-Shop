@@ -176,6 +176,6 @@ Use this section to include a brief code snippet of functionality that you are p
 ## Issues and Resolutions
  Use this section to list of all major issues encountered and their resolution.
 
-#### SAMPLE.....
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: Missing comma after first object in sources {} object
+I had an error with setting up the backend that took me beyond the weekend to resolve. Resolving it required that I place " protect_from_forgery with: :exception" and "skip_before_action :verify_authenticity_token" in my application_controller file. 
+
+Another very difficult error continued to occur when trying to deploy with Heroku. There was a "sassc" file that was unreadable by Heroku and a package-lock.json that Heroku did not want in my root directory.  I removed all references to "sassc" and deleted the the package-lock.json. Deployment then took place succefully,but I had to migrate and seed my database again plus modify the api call view my data. 
